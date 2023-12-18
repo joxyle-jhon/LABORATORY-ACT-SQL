@@ -12,7 +12,7 @@ VALUES
 
 CREATE TABLE QUALIFIED (
     FacultyID INT,
-    CourseID VARCHAR(😎,
+    CourseID VARCHAR(8),
     DateQualified DATE
 );
 
@@ -39,7 +39,7 @@ VALUES
 CREATE TABLE SECTION (
     SectionNo INT PRIMARY KEY,
     Semester VARCHAR(7),
-    CourseID VARCHAR(😎
+    CourseID VARCHAR(8)
 );
 
 INSERT INTO SECTION (SectionNo, Semester, CourseID)
@@ -50,7 +50,7 @@ VALUES
     (2715, 'II-2018', 'ISM 4930');
 
 CREATE TABLE COURSE (
-    CourseID VARCHAR(😎 PRIMARY KEY,
+    CourseID VARCHAR(8) PRIMARY KEY,
     CourseName VARCHAR(15)
 );
 
@@ -79,7 +79,8 @@ ADD Class VARCHAR(10);
 DROP TABLE REGISTRATION;
 
 ALTER TABLE FACULTY
-MODIFY FacultyName VARCHAR(40);
+ALTER COLUMN FacultyName VARCHAR(40);
+
 
 SELECT SectionNo
 FROM SECTION
